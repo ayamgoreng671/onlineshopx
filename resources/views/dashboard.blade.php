@@ -5,13 +5,25 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
+    <div class="flex">
+        <div class="absolute z-10 bg-gradient-to-t from-slate-900">
+            <img class="w-screen" src="{{ asset('images/backgrounds/hero-image.png') }}">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center z-20 shadow-lg shadow-slate-100/75">
+            <div class="text-center text-7xl font-medium text-white ">
+                <h1>Welcome to Online-Shopx !</h1>
             </div>
+        </div>
+        <form class="absolute top z-20 flex flex-col items-center justify-center" action="" method="">
+            @csrf
+            @method('POST')
+            <input type="search" class="rounded-lg border-2 border-amber-600 w-full">
+        </form>
+    </div>
+    <div class="flex mx-auto">
+        <div>
+
         </div>
     </div>
 </x-app-layout>
+<x-preview-image></x-preview-image>
